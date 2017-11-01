@@ -1,0 +1,18 @@
+/* PHASE 2: Notifications */
+
+.badge {
+  display: inline;
+  font-size: 14px;
+  background: #000;
+  border-radius: 50%;
+}
+
+li:hover .badge {
+  background: #f00;
+}
+
+
+.header-notifications{
+  display: flex
+
+}
