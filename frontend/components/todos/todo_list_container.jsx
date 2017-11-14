@@ -1,23 +1,19 @@
-import { connect } from 'react-redux';
+import React from 'react';
 import TodoList from './todo_list';
+import {connect} from 'react-redux';
+import {allTodos} from '../../reducers/selectors';
+import {receiveTodo, receiveTodos} from '../../actions/todo_actions';
 
-import { receiveTodos, receiveTodo } from '../../actions/todo_actions';
-import { allTodos } from '../../reducers/selectors';
-
-
-export const mapStateToProps = state => ({
+const mapStateToProps = state => ({
   todos: allTodos(state)
-
 });
 
 
-export const mapDispatchToProps = dispatch => ({
-  receiveTodo: (todo) => dispatch(receiveTodo(todo))
-
-
-
-
-
+const mapDispatchToProps = (dispatch) => ({
+  receiveTodo: todo => dispatch(receiveTodo(todo))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
+
+//filters state and passes it down to ToDoList component
+//ToDoList would have access to todos, receiveTodo as props

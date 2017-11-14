@@ -1,19 +1,16 @@
 import React from 'react';
 import TodoListContainer from './todos/todo_list_container';
 
-const App = () => {
+const App = () => (
+  <div>
+    <h1> Inside App Component </h1>
+    <TodoListContainer />
 
-  return (
-    <div>
-
-      <p> Hello App Academy</p>
-      <TodoListContainer />
-    </div>
-
-  );
+  </div>
 
 
-};
+
+);
 
 
 export default App;

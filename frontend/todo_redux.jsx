@@ -1,27 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {receiveTodo, receiveTodos} from './actions/todo_actions';
-
 import configureStore from './store/store';
-//import functional classes...
 import App from './components/app';
-
-
-
 import Root from './components/root';
+import selector from './reducers/selectors';
 
-
-
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-  const main = document.getElementById('main');
-  const store = configureStore();
+document.addEventListener("DOMContentLoaded", () => {
+  let store = configureStore();
   window.store = store;
-  window.receiveTodo = receiveTodo;
-  window.receiveTodos = receiveTodos;
-  ReactDOM.render(<Root store={store}/>,main);
+  
+  const main = document.getElementById("main");
+
+  ReactDOM.render(<Root store={store} />, main);
 
 
-}
-);
+});
