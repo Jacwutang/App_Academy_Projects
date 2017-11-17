@@ -8,12 +8,12 @@ import PokemonDetailContainer from './pokemon_detail_container';
 
 class PokemonIndex extends Component {
   componentWillMount() {
-    this.props.requestAllPokemon();
+    // this.props.requestAllPokemon();
   }
 
   render() {
     const { pokemon, loading } = this.props;
-    
+
     return (
       loading ?
       <LoadingIcon /> :
