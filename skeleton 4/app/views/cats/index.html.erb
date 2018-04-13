@@ -1,0 +1,21 @@
+<h1>Cats upon cats!</h1>
+
+<ul>
+  <% @cats.each do |cat| %>
+    <li><a href="<%= cat_url(cat) %>"><%= cat.name %></a></li>
+  <% end %>
+</ul>
+
+
+<ul>
+  <li>
+    <form action="<%= session_url %>" method="POST">
+      <input type="hidden"
+             name="authenticity_token"
+             value="<%= form_authenticity_token %>">
+      <input type="hidden" value="delete" name="_method" />
+      <input type="submit" value="Logout" />
+    </form>
+  </li>
+</ul>
+<a href="<%= new_cat_url %>">Create cat</a>
