@@ -1,0 +1,24 @@
+/* PHASE 3: Layout */
+
+
+.container {
+  margin: 0 auto;
+  width: 902px;
+  display: flex;
+  background: white;
+}
+
+.content-sidebar {
+  min-height: 240px;
+  width: 27%;
+  border: 1px solid lightgray;
+  border-right: none;
+  border-top: none;
+}
+
+.content-main {
+  min-height: 240px;
+  width: 73%;
+  border: 1px solid lightgray;
+  border-top: none;
+}
